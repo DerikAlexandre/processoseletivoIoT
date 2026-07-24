@@ -66,7 +66,6 @@ Se a leitura chegar a 0g:
 O funcionamento final do projeto é validado pelos testes automáticos do Wokwi através do GitHub Actions.
 
 ## Comentários Adicionais
-## Comentários Adicionais
 
 Uma das maiores dificuldades foi entender o motivo da falha nos testes. No começo, o GitHub Actions mostrava apenas códigos de erro, sem indicar claramente o problema. Também aconteceu uma falha de conexão com o Wokwi, o que dificultou ainda mais a análise.
 Depois de verificar os logs com mais atenção, percebi que o erro estava na conversão da leitura do sensor HX711. O fator usado era 0.42, mas o correto para os testes era 420.0. Após essa correção, os três testes passaram normalmente.
