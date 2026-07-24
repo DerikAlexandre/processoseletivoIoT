@@ -34,7 +34,7 @@ def ler_hx711():
 
 
 def converter_para_gramas(valor_bruto):
-    peso = round(valor_bruto / 0.42)
+    peso = round(valor_bruto / 420.0)
 
     if peso < 0:
         peso = 0
