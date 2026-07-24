@@ -68,8 +68,9 @@ O funcionamento final do projeto é validado pelos testes automáticos do Wokwi 
 ## Comentários Adicionais
 ## Comentários Adicionais
 
-Uma das dificuldades durante o desenvolvimento foi a configuração do ambiente para gerar o arquivo `fs.bin`. Foi necessário utilizar o Docker para preparar o ambiente e gerar o arquivo usado na simulação.
+Uma das maiores dificuldades foi entender o motivo da falha nos testes. No começo, o GitHub Actions mostrava apenas códigos de erro, sem indicar claramente o problema. Também aconteceu uma falha de conexão com o Wokwi, o que dificultou ainda mais a análise.
+Depois de verificar os logs com mais atenção, percebi que o erro estava na conversão da leitura do sensor HX711. O fator usado era 0.42, mas o correto para os testes era 420.0. Após essa correção, os três testes passaram normalmente.
 
-Também houve uma dificuldade inicial para entender como o `diagram.json` funciona e como os componentes e pinos precisam ser configurados para que o Wokwi consiga interagir corretamente com o projeto.
+Outra dificuldade foi durante o desenvolvimento foi a configuração do ambiente para gerar o arquivo `fs.bin`. Foi necessário utilizar o Docker para preparar o ambiente e gerar o arquivo usado na simulação. Houve também uma dificuldade inicial para entender como o `diagram.json` funciona e como os componentes e pinos precisam ser configurados para que o Wokwi consiga interagir corretamente com o projeto.
 
 No final, o projeto ajudou a entender melhor a integração entre o código em MicroPython, a montagem virtual do circuito no Wokwi e os testes automáticos executados pelo GitHub Actions.
