@@ -4,7 +4,7 @@
 ## Identificação do Candidato
 
 **Nome completo:** Derik Alexandre Alves de Andrade
-**GitHub:** DerikAlexandre
+**GitHub:** [DerikAlexandre](https://github.com/larabatista8/processoseletivoIA)
 
 ## Visão Geral da Solução
 
