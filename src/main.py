@@ -1,11 +1,12 @@
 from machine import Pin
-from time import sleep_ms
+from time import sleep_ms, ticks_ms, ticks_diff
 
 DT_PIN = 19
 SCK_PIN = 18
 
 LIMITE_VAZIO = 150
 LIMITE_CHEIO = 4900
+TEMPO_ATIVACAO_SENSOR_MS = 1000
 
 dt = Pin(DT_PIN, Pin.IN)
 sck = Pin(SCK_PIN, Pin.OUT)
@@ -47,6 +48,7 @@ sensor_ativo = False
 
 estado = "inicio"
 ultimo_peso = None
+inicio_monitoramento = ticks_ms()
 
 print("Sistema Kanban Inicializado")
 
@@ -60,7 +62,11 @@ while True:
 
     peso = converter_para_gramas(leitura)
 
-    if peso > 0:
+    if (
+        peso > 0
+        or ticks_diff(ticks_ms(), inicio_monitoramento)
+        >= TEMPO_ATIVACAO_SENSOR_MS
+    ):
         sensor_ativo = True
 
     if sensor_ativo:
