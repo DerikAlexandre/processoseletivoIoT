@@ -4,7 +4,7 @@
 ## Identificação do Candidato
 
 **Nome completo:** Derik Alexandre Alves de Andrade
-**GitHub:** https://github.com/DerikAlexandre
+<br>**GitHub:** https://github.com/DerikAlexandre
 
 ## Visão Geral da Solução
 
