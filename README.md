@@ -5,6 +5,7 @@
 
 **Nome completo:** Derik Alexandre Alves de Andrade
 **GitHub:** [DerikAlexandre](https://github.com/larabatista8/processoseletivoIA)
+**GitHub:** https://github.com/DerikAlexandre
 
 ## Visão Geral da Solução
 
